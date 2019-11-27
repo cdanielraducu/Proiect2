@@ -13,12 +13,14 @@ void Comanda::setBon(const string &bonMasa) {
     this->bon += bonMasa;
 }
 
-int Comanda::getPretPerMasa() const {
-    return pretPerMasa;
+int Comanda::getPret() const {
+
+    return pret;
+
 }
 
-void Comanda::setPretPerMasa(int pret) {
+void Comanda::setPret(int pret) {
 
-    this->pretPerMasa = pret;
+    this->pret = pret;
     cout<<"aaaaaaaaaaaaaaaaaaaa\n";
 }

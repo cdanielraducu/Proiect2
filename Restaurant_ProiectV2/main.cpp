@@ -79,6 +79,9 @@ public:
     void SetAchitarePentru(int indexGrup, int indexClient, bool tip){
         grups[indexGrup].AchitarePentru(indexClient, tip);
     }
+    int getPretCorectBun(int indexGrup, int indexClient){
+       return grups[indexGrup].getPretCorect(indexClient);
+    }
     void cheamaChelnerGrupul(const GrupClienti &grup) {
         int saVinaChelnerul = 0;
         cout<<"Sa vina chelnerul?\n";
@@ -170,12 +173,14 @@ void f(){throw Management(-1);}
 
 
 int main() {
+// decomenteaza astea si o sa vezi ca merge ;?
+//    GrupClienti grup1;
+//    cin>>grup1;
+//    grup1.ConsumatiePentru(0,10);
+//    cout<<grup1.getComandaClient()[0].getPretPerMasa();
 
-    GrupClienti grup1;
-    cin>>grup1;
-    grup1.ConsumatiePentru(0,10);
-    cout<<grup1.getGrupClient()[0].getConsumatie();
-    /*Management management;
+
+    Management management;
     cin >> management;
     cin.clear();
     cout << management.getRestaurant().getChelneri()[1].getId();
@@ -186,19 +191,22 @@ int main() {
 //    for(int i{0};i<management.getNrGrupuri();i++){
 //        cout<<management.getGrups()[i].getGrupID()<<endl;
 //    }
-//    for (int i{0}; i < management.getGrups()[0].getNrClienti(); i++) {
-//    management.getGrups()[0].getComandaClient()[i].getPretPerMasa();
-//}
-   management.setConsumatiePentru(0,0,10);
 
 
+    //management.setConsumatiePentru(0,0,10);
+    //cout<<management.getPretCorectBun(0,0)<<endl;
 
 
-    management.cheamaChelnerGrupul(management.getGrups()[0]);
+    //comanda de aici porneste clasa mangement sa zicem, si se blocheaza dupa ce ar trebui sa inregistreze prima comanda pentru primu client
+    //management.cheamaChelnerGrupul(management.getGrups()[0]);
     //eroare imi da in clasa Comanda.cpp la setPretPerMasa, nu are NICI UN SENS de ce mi-ar da eroare acolo
+    //la inceput in main daca decomentezi partea cu grupul o sa vezi ca merge setPretPerMasa
+
+    //Oare o fi din cauza faptului ca fac mostenire la Management de de GrupClienti, care face din Comanda?
+    //Poate n-am setat ceva cum trebuie
 
 
-*/
+
     //exceptia
 //    try{
 //        f();

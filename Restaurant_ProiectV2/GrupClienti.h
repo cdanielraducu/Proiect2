@@ -60,20 +60,22 @@ public:
     }
     void ConsumatiePentru(int index, int cat){
 
-        comandaClient[index].setPretPerMasa(cat);
+        comandaClient[index].setPret(cat);
 
-        comanda.setPretPerMasa(cat);
+        comanda.setPret(cat);
     }
     void BonConsumatiePentru(int index, string s){
         comandaClient[index].setBon(s);
     }
     void ConsumatiePentruGrup(int cat){
-        comanda.setPretPerMasa(cat);
+        comanda.setPret(cat);
     }
     void BonConsumatiePentruGrup(string s){
         comanda.setBon(s);
     }
-
+    int getPretCorect(int indexClient){
+       return comandaClient[indexClient].getPret();
+    }
 };
 
 

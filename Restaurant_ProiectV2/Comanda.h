@@ -12,11 +12,11 @@ using  namespace std;
 
 class Comanda{
 protected:
-    int pretPerMasa;
-    string bon;
+    int pret{0};
+    string bon{""};
 public:
     Comanda(){
-        pretPerMasa = 0;
+        pret = 0;
         bon = "";
     }
     ~Comanda(){//cout<<"Comanda::Destructor";
@@ -26,9 +26,9 @@ public:
 
     void setBon(const string &bon);
 
-    int getPretPerMasa() const;
+    int getPret() const;
 
-    void setPretPerMasa(int pretPerMasa);
+    void setPret(int pretPerMasa);
 
 };
 

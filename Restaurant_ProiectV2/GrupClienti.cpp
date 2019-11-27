@@ -14,10 +14,10 @@ GrupClienti::GrupClienti(int nr_clienti, int id) {
     okAvetiRezervataMasa = 0;
     for(int i{0}; i<nr_clienti; i++) {
         Client clientNou(i+1);
-        Comanda comanda;
+        Comanda comandaNoua;
         cin>>clientNou; cin.clear();
         grupClient.push_back(clientNou);
-        comandaClient.push_back(comanda);
+        comandaClient.push_back(comandaNoua);
     }
 }
 
@@ -47,20 +47,19 @@ ostream &operator<<(ostream &out, const GrupClienti &grup) {
     }
     return out;
 }
-GrupClienti::~GrupClienti() {
-
-}
+GrupClienti::~GrupClienti() = default;
 
 istream &operator>>(istream &in, GrupClienti &grup) {
     cout<<"Cate persoane sunteti: "; int n; cin>>n; cin.clear();
     grup.setNrClienti(n);
     for(int i{0}; i<grup.getNrClienti(); i++){
         Client clientNou(i+1);
-        Comanda comanda;
+        Comanda comandaNoua;
         cin>>clientNou; cin.clear();
         grup.addClientLaGrup(clientNou);
-        grup.comandaClient.push_back(comanda);
+        grup.comandaClient.push_back(comandaNoua);
     }
+
     return in;
 }
 
