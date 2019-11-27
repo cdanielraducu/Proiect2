@@ -1,0 +1,3 @@
+D:/CLionProjects/Restaurant_ProiectV2/cmake-build-debug/CMakeFiles/Restaurant_ProiectV2.dir
+D:/CLionProjects/Restaurant_ProiectV2/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/CLionProjects/Restaurant_ProiectV2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
